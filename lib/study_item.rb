@@ -15,4 +15,12 @@ class StudyItem
     def modify_status
         @status = true
     end
+
+    def to_s
+        if status.eql?(false)
+          return "##id: none  Title: #{title} , category: #{category} , status: 'pendente' "
+        else
+            return "##id: none  Title: #{title} , category: #{category} , status: 'finalizado' "
+        end
+    end
 end

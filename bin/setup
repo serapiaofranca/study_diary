@@ -5,6 +5,11 @@ bundle install
 
 echo
 echo '== Configuracao inicial realizada com sucesso =='
+echo 
+echo '** configure database **'
+echo 'sqlite3 version:: '
+ruby './db/create_db.rb'
+ruby './db/create_tables.rb'
 
 ruby './data/info.rb'
 
