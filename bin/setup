@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+set -e
+
+bundle install
+
+echo
+echo '== Configuracao inicial realizada com sucesso =='
+
+ruby './data/info.rb'
+
+clear
