@@ -33,6 +33,8 @@ while i < 10
         return         
     else
         i+= 1
-    end   
+    end
+    sleep(1)   
+    system('clear')
 end
 
