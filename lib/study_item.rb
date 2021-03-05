@@ -1,3 +1,5 @@
+require './db/control_db.rb'
+
 class StudyItem
     attr_reader :title, :category
     attr_accessor :status
@@ -8,16 +10,12 @@ class StudyItem
       @status = false
     end
 
-    def status
-        @status
-    end
-
     def modify_status
         @status = true
     end
 
     def to_s
-        if status.eql?(false)
+        if status.eql?(false) || status.eql?(0)
           return "##id: none  Title: #{title} , category: #{category} , status: 'pendente' "
         else
             return "##id: none  Title: #{title} , category: #{category} , status: 'finalizado' "
